@@ -146,3 +146,4 @@ func (p *Processor) makeCompareFunc() func(string) bool {
 		return strings.Contains(line, p.Keyword)
 	}
 }// jan iteration 1
+// jan iteration 2
