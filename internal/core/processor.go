@@ -151,3 +151,4 @@ func (p *Processor) makeCompareFunc() func(string) bool {
 // jan iteration 4
 // jan iteration 5
 // jan iteration 6
+// jan iteration 7
