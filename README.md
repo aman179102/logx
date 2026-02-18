@@ -47,13 +47,3 @@ git clone https://github.com/aman179102/logx
 cd logx
 go build -o logx ./cmd/logx
 sudo mv logx /usr/local/bin/
-// polish 48
-// polish 49
-// polish 50
-// polish 51
-// polish 52
-// polish 53
-// polish 54
-// polish 55
-// polish 56
-// polish 57
