@@ -4,6 +4,9 @@
 It reads from a file or standard input, matches lines containing a keyword, and can report
 simple frequency statistics. The goal is to stay predictable, script-friendly, and boring.
 
+- > A deliberately boring CLI for quick log inspection and scripting.
+
+
 ## Why logx?
 
 In many day-to-day workflows, I only need quick answers like:
@@ -38,8 +41,11 @@ It focuses on:
 - **Boring code**  
   Written in plain Go using only the standard library, easy to read and audit.
 
-## Example
+## Example usage
 <img width="1138" height="640" alt="Demo" src="https://github.com/user-attachments/assets/7aa4bbe0-d61e-42e1-bc02-e29a26851921" />
+
+- Filtering and summarizing errors from a sample log file.
+
 
 
 
