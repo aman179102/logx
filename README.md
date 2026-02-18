@@ -38,6 +38,11 @@ It focuses on:
 - **Boring code**  
   Written in plain Go using only the standard library, easy to read and audit.
 
+## Example
+<img width="1138" height="640" alt="Demo" src="https://github.com/user-attachments/assets/7aa4bbe0-d61e-42e1-bc02-e29a26851921" />
+
+
+
 ## Installation
 
 ### Build from source
