@@ -1,32 +1,50 @@
-# logx – a simple log file filter and analyzer
+# logx — a small Unix-style log analyzer
 
-`logx` is a Unix-style command-line tool for filtering, counting, and analyzing log files. It reads from a file or standard input, matches lines containing a keyword, and can show the most frequent matching lines. Designed to be simple, predictable, and suitable for scripting.
+`logx` is a minimal command-line tool for filtering, counting, and summarizing log files.  
+It reads from a file or standard input, matches lines containing a keyword, and can report
+simple frequency statistics. The goal is to stay predictable, script-friendly, and boring.
 
 ## Why logx?
 
-While `grep` is excellent for pattern matching, it doesn't offer built-in frequency analysis or script-friendly exit codes. `awk` can do frequency counts but requires writing non-trivial scripts. `logx` fills a small niche:
+In many day-to-day workflows, I only need quick answers like:
 
-- Filter lines by a keyword (substring match).
-- Count matches and exit with 0/1 to indicate presence/absence.
-- Show the top N most frequent matching lines.
-- Machine-readable output for easy integration with other tools.
-- Works offline, no dependencies, handles huge files.
+- Does this log contain errors?
+- How many times did this message appear?
+- What is the most common log line?
 
-## Design Philosophy
+These are all possible with `grep` and `awk`, but they usually require writing small scripts
+each time. `logx` exists as a deliberately simple alternative for these common cases.
 
-- **Do one thing well**: Filter and analyze log lines.
-- **Streaming**: Never load the whole file into memory.
-- **Predictable**: Deterministic sorting, clear exit codes.
-- **Composable**: Works with pipes and redirections.
-- **Boring code**: Written in pure Go, easy to audit and maintain.
+It focuses on:
+- Substring matching (not regex)
+- Clear exit codes for scripting
+- Built-in frequency analysis
+- Zero configuration and no dependencies
+
+## Design philosophy
+
+- **Do one thing well**  
+  Filter and summarize log lines. Nothing more.
+
+- **Streaming by default**  
+  Files are processed line by line without loading everything into memory.
+
+- **Predictable behavior**  
+  Deterministic output ordering and well-defined exit codes.
+
+- **Composable**  
+  Works naturally with pipes and shell redirections.
+
+- **Boring code**  
+  Written in plain Go using only the standard library, easy to read and audit.
 
 ## Installation
 
-Download the static binary for Linux from the [releases page](https://example.com) (no hosting provided – you build it yourself or use your package manager).  
+### Build from source
 
-To build from source:
 ```bash
-git clone https://github.com/yourorg/logx
+git clone https://github.com/aman179102/logx
 cd logx
 go build -o logx ./cmd/logx
-sudo mv logx /usr/local/bin
+sudo mv logx /usr/local/bin/
+// polish 48
