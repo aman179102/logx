@@ -48,3 +48,4 @@ cd logx
 go build -o logx ./cmd/logx
 sudo mv logx /usr/local/bin/
 // polish 48
+// polish 49
